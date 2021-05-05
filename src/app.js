@@ -14,10 +14,10 @@ export default function App(){
     // const [logo, setLogo] = useState('');
 
 
-    const search = evt => {
+    const search = async evt => {
         if(evt.key === 'Enter'){
             //fetch weather
-            fetch(`${api.base}forecast?q=${query}&appid=${api.key}`)
+            await fetch(`${api.base}forecast?q=${query}&appid=${api.key}`)
             .then(res => res.json())
             .then(result => {
             setWeather(result);
@@ -67,16 +67,15 @@ export default function App(){
 
     return `${day} ${date} ${month} ${year}`
     }
-
     
     return(
         <div className="app">
-            <div style={{ 
+            {/* <div style={{ 
                 backgroundImage: `url(${photo})`,
                 backgroundRepeat: 'no-repeat',
                 width:'500%',
                 opacity:0.9
-            }}>
+            }}> */}
             <main>
             <div className="search-box">
                 <input
@@ -120,6 +119,13 @@ export default function App(){
                         </thead>
                         <tbody>
                         <tr>
+                            <td><img src={`http://openweathermap.org/img/wn/${weather.list[0].weather[0].icon}@2x.png`} alt="" /></td>
+                            <td><img src={`http://openweathermap.org/img/wn/${weather.list[8].weather[0].icon}@2x.png`} alt="" /></td>
+                            <td><img src={`http://openweathermap.org/img/wn/${weather.list[16].weather[0].icon}@2x.png`} alt="" /></td>
+                            <td><img src={`http://openweathermap.org/img/wn/${weather.list[24].weather[0].icon}@2x.png`} alt="" /></td>
+                            <td><img src={`http://openweathermap.org/img/wn/${weather.list[32].weather[0].icon}@2x.png`} alt="" /></td>
+                        </tr> 
+                        <tr>
                             <td><p>{Math.round(weather.list[0].main.temp-273.15)}°C</p></td>
                             <td><p>{Math.round(weather.list[8].main.temp-273.15)}°C</p></td>
                             <td><p>{Math.round(weather.list[16].main.temp-273.15)}°C</p></td>
@@ -142,6 +148,6 @@ export default function App(){
             <img src={photo} alt="" />
             </main>
             </div>
-        </div>    
+        // </div>    
     );
 }
