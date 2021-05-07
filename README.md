@@ -1,5 +1,5 @@
 # Weather APP
-[LINK](https://hsia-weather-app.netlify.app/)
+[hsia-weather-app](https://hsia-weather-app.netlify.app/)
 
 # Intro
 Weather app is a project made by Hsia. It's a challenge asigned by BECODE LIEGE code training center. I have been working on this from 30/04/2021 to 07/05/2021 to practice how to make a basic React project.
@@ -28,5 +28,5 @@ Enough is enough, you decide to build a small web application for them so that y
 
 
 # A glance of the masterpiece
-![photo]()
+![photo](https://raw.githubusercontent.com/yunhsiaho/new-weather-app/main/weatherapp.png)
 
