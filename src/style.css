@@ -5,13 +5,13 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family: 'Grandstander', cursive;
 
 }
 body{
-    font-family: 'Grandstander', cursive;
+    transition:1s ease-out;
     background-size: cover;
-    background-position:bottom ;
-    transition:0.4s ease-out;
+    background-position:center;
 }
 .greeting{
     text-align: center;
@@ -73,6 +73,7 @@ main{
 
 .location-box{
     margin:2rem;
+    transition:0.4s ease;
 }
 
 .weather-box{
@@ -80,50 +81,51 @@ main{
     display:flex;
     flex-direction: row;
     justify-content: center;
+    transition:0.4s ease;
 
 }
-.p{
-    margin:-10rem;
-}
+
 .temp{
     text-align: center;
     position: relative;
     display: inline-block;
-    margin:1rem;
     background-color: rgba(255,255,255,0.2);
     border-radius:16px;
+    margin:1rem;
 
-    padding:1rem 2rem;
+    padding:0rem 2rem;
     color:#FFF;
-    font-size:5rem;
+    font-size:6rem;
     font-weight:900;
 
     text-shadow:3px 3px rgba(50,50,70,0.5);
     text-align: center;
     box-shadow: 3px 6px rgba(0,0,0,0.2);
 }
-
+.temp-num{
+    padding-top:2rem;
+}
 
 
 .weather{
     text-align: center;
     color:#FFF;
-    margin-top:-5rem;
     font-size: 3rem;
     font-weight:700;
     text-shadow: 3px 3px rgba(50,50,70,0.5);
-    
+    margin-bottom:2rem;
 }
 
 .weather img{
     width:15rem;
-    margin: -3rem;
+    margin-top: 2rem;
     }
 
 .all-weather{
     color:white;
     text-shadow: 3px 3px rgba(50,50,70,0.8);
     width:80%;
+    transition:0.4s ease;
 }
 
 .day1, .day2, .day3, .day4,.day5{

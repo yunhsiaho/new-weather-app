@@ -13,8 +13,7 @@ export default function App(){
     const [query, setQuery] = useState('');
     const [weather, setWeather] = useState('');
     const [countryName, setCountryName] = useState('');
-    const [photo, setPhoto] = useState('https://images.unsplash.com/photo-1598935893720-1f5ee04fd552?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-    // const [logo, setLogo] = useState('');
+    const [photo, setPhoto] = useState('https://images.unsplash.com/photo-1556115908-233c785befbe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
 
 
     const search = async evt => {
@@ -74,17 +73,16 @@ export default function App(){
     }
     
     return(
-        <div className="app container m-auto" style={{ 
+        <div className="app container m-0 " style={{ 
             backgroundImage: `url(${photo})` ,
             backgroundRepeat: 'no-repeat',
-            backgroundSize: `cover`,
-            backgroundPosition:`center`
+            backgroundSize: `cover`
             }}
             >
             <div className="row">
             <main>
             <p className="greeting">Hello world!</p>
-            <div className="search-box col-12">
+            <div className="search-box col-12 ">
                 <input
                 type="text"
                 className="search-bar"
@@ -97,36 +95,23 @@ export default function App(){
             {(typeof weather.list!= "undefined")?(   
             <div>    
                 <div className="weather-box row">         
-                    <div className="location-box col-12">
+                    <div className="location-box col-12 col-lg-5">
                         <div className="location">{weather.city.name}, {countryName}</div>
                         <div className="date">{dateBuilder(new Date())}</div>
                         <div className="temp">
-                        <p>{Math.round(weather.list[0].main.temp-273.15)}°C</p>
+                        <p className="temp-num">{Math.round(weather.list[0].main.temp-273.15)}°C</p>
                         </div>
                     </div>
-                    <div className="weather col-12">
+                    <div className="weather col-12 col-lg-5">
                     <img src={`http://openweathermap.org/img/wn/${weather.list[0].weather[0].icon}@2x.png`} alt="" />
                     <p>{weather.list[0].weather[0].description}</p>
                     </div>
                 </div>        
                     <div className="all-weather row d-flex m-auto">
-                        <div className="day1 col-10">
-                            <div className="title">
-                            {weather.list[0].dt_txt.substr(0, 10)}
-                            </div>
-                            <div className="logogo">
-                            <img src={`http://openweathermap.org/img/wn/${weather.list[0].weather[0].icon}@2x.png`} alt="" />
-                            </div>
-                            <div className="tempature">
-                            <p>{Math.round(weather.list[0].main.temp-273.15)}°C</p>
-                            </div><div className="description">
-                            <p>{weather.list[0].weather[0].description}</p>
-                            </div>
-                        </div>
 
-                        <div className="day2 col-10">
+                        <div className="day1 col-11 col-md-11 col-lg-2">
                             <div className="title">
-                            {weather.list[0].dt_txt.substr(0, 10)}
+                            {weather.list[8].dt_txt.substr(0, 10)}
                             </div>
                             <div className="logogo">
                             <img src={`http://openweathermap.org/img/wn/${weather.list[8].weather[0].icon}@2x.png`} alt="" />
@@ -138,7 +123,7 @@ export default function App(){
                             </div>
                         </div>
 
-                        <div className="day3 col-10">
+                        <div className="day2 col-11 col-md-5 col-lg-2">
                             <div className="title">
                             {weather.list[16].dt_txt.substr(0, 10)}
                             </div>
@@ -152,7 +137,7 @@ export default function App(){
                             </div>
                         </div>
 
-                        <div className="day4 col-10">
+                        <div className="day3 col-11 col-md-5 col-lg-2">
                             <div className="title">
                             {weather.list[24].dt_txt.substr(0, 10)}
                             </div>
@@ -166,7 +151,7 @@ export default function App(){
                             </div>
                         </div>
 
-                        <div className="day5 col-10">
+                        <div className="day4 col-11 col-md-5 col-lg-2">
                             <div className="title">
                             {weather.list[32].dt_txt.substr(0, 10)}
                             </div>
@@ -179,10 +164,23 @@ export default function App(){
                             <p>{weather.list[32].weather[0].description}</p>
                             </div>
                         </div>
+
+                        <div className="day5 col-11 col-md-5 col-lg-2">
+                            <div className="title">
+                            {weather.list[39].dt_txt.substr(0, 10)}
+                            </div>
+                            <div className="logogo">
+                            <img src={`http://openweathermap.org/img/wn/${weather.list[39].weather[0].icon}@2x.png`} alt="" />
+                            </div>
+                            <div className="tempature">
+                            <p>{Math.round(weather.list[39].main.temp-273.15)}°C</p>
+                            </div><div className="description">
+                            <p>{weather.list[39].weather[0].description}</p>
+                            </div>
+                        </div>
                     </div>
             </div>
             ):('')}
-            {/* <img src={photo} alt="" /> */}
             </main>
             </div>
         </div>    
