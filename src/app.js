@@ -73,7 +73,7 @@ export default function App(){
     }
     
     return(
-        <div className="app container m-0 " style={{ 
+        <div className="app container-fluid m-0 " style={{ 
             backgroundImage: `url(${photo})` ,
             backgroundRepeat: 'no-repeat',
             backgroundSize: `cover`
