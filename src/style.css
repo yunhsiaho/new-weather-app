@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+body{
+    font-family: 'Grandstander', cursive;
+    background-size: cover;
+    background-position:bottom ;
+    transition:0.4s ease-out;
+}
+.greeting{
+    text-align: center;
+    color:#FFF;
+    font-size:2.5rem;
+    font-weight:500;
+    text-align: center;
+    text-shadow: 3px 3px rgba(50,50,70,0.5);
+}
+main{
+    min-height:100vh;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.75));
+    padding:35px;
+}
+.search-box{
+    margin-top:2rem;
+}
+.search-box .search-bar{
+    width: 100%;
+    padding:15px;
+    appearance: none;
+    background: none;
+    border:none;
+    outline:none;
+
+    background-color:rgba(255,255,255,0.5);
+    border-radius:0px 0px 16px 16px;
+    margin-top:-25px;
+
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+
+    color:#313131;
+    font-size:20px;
+
+    transition:0.4s ease;
+}
+
+.search-box .search-bar:focus{
+    background-color: rgba(255,255,255,0.75);
+}
+
+.location-box .location{
+    color:#FFF;
+    font-size:3rem;
+    font-weight:500;
+    text-align: center;
+    text-shadow: 3px 3px rgba(50,50,70,0.5);
+    margin-top:1rem;
+}
+
+.location-box .date{
+    color:#FFF;
+    font-size: 30px;
+    font-weight:300;
+    font-style:italic;
+    text-align:center;  
+    text-shadow: 2px 2px rgba(50, 50, 70 ,0.5);
+}
+
+.location-box{
+    margin:2rem;
+}
+
+.weather-box{
+    text-align: center;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.p{
+    margin:-10rem;
+}
+.temp{
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin:1rem;
+    background-color: rgba(255,255,255,0.2);
+    border-radius:16px;
+
+    padding:1rem 2rem;
+    color:#FFF;
+    font-size:5rem;
+    font-weight:900;
+
+    text-shadow:3px 3px rgba(50,50,70,0.5);
+    text-align: center;
+    box-shadow: 3px 6px rgba(0,0,0,0.2);
+}
+
+
+
+.weather{
+    text-align: center;
+    color:#FFF;
+    margin-top:-5rem;
+    font-size: 3rem;
+    font-weight:700;
+    text-shadow: 3px 3px rgba(50,50,70,0.5);
+    
+}
+
+.weather img{
+    width:15rem;
+    margin: -3rem;
+    }
+
+.all-weather{
+    color:white;
+    text-shadow: 3px 3px rgba(50,50,70,0.8);
+    width:80%;
+}
+
+.day1, .day2, .day3, .day4,.day5{
+    margin-top:3rem;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255,255,255,0.2);
+    border-radius:16px;
+
+    padding:10px 10px;
+    color:#FFF;
+    font-size:25px;
+    font-weight:500;
+
+    text-shadow:3px 3px rgba(50,50,70,0.5);
+    text-align: center;
+    box-shadow: 3px 6px rgba(0,0,0,0.2);
+}
